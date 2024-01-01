@@ -1,8 +1,10 @@
 import {ChatCompletionRequestMessage} from "openai";
 
 import GPT3TokenizerImport from 'gpt3-tokenizer';
-import {config} from "./config.js";
+import {config} from "./config";
 
+// 特殊字符匹配，遇到 ^ 匹配为 \^，避免误以为是正则表达式
+// $& 表示正则表达式匹配的内容
 export const regexpEncode = (str: string) => str.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&');
 
 const GPT3Tokenizer: typeof GPT3TokenizerImport =
