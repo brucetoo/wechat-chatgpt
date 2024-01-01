@@ -1,7 +1,7 @@
 import { WechatyBuilder } from "wechaty";
 import QRCode from "qrcode";
-import { ChatGPTBot } from "./bot";
-import {config} from "./config";
+import { ChatGPTBot } from "./bot.js";
+import {config} from "./config.js";
 const chatGPTBot = new ChatGPTBot();
 
 // TODO https://wechaty.js.org/docs/howto/deploy-padlocal#b 可以买服务，最稳定

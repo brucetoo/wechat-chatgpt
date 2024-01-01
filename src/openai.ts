@@ -5,8 +5,8 @@ import {
   OpenAIApi
 } from "openai";
 import fs from "fs";
-import DBUtils from "./data";
-import {config} from "./config";
+import DBUtils from "./data.js";
+import {config} from "./config.js";
 
 const configuration = new Configuration({
   apiKey: config.openai_api_key,
